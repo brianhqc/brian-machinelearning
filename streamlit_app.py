@@ -29,3 +29,5 @@ with st.expander('Data Visualization'):
 with st.sidebar:
   st.header('Input Features')
   gender = st.selectbox('gender', df['gender'].unique())
+  tenure = st.slider('tenure', df['tenure'].unique())
+
