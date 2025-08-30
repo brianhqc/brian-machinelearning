@@ -28,3 +28,4 @@ with st.expander('Data Visualization'):
 # Data Preparateions
 with st.sidebar:
   st.header('Input Features')
+  gender = st.selectbox('gender', df['gender'].unique())
