@@ -29,6 +29,11 @@ with st.expander('Data Visualization'):
 with st.sidebar:
   st.header('Input Features')
   gender = st.selectbox('gender', df['gender'].unique())
+  SeniorCitizen = st.selectbox('SeniorCitizen', df['SeniorCitizen'].unique())
+  OnlineSecurity = st.selectbox('OnlineSecurity', df['OnlineSecurity'].unique())
+  Contract = st.selectbox('Contract', df['Contract'].unique())
   tenure = st.slider('tenure', df['tenure'].min(), df['tenure'].max())
   MonthlyCharges = st.slider('MonthlyCharges', df['MonthlyCharges'].min(), df['MonthlyCharges'].max())
-
+  TotalCharges = st.slider('TotalCharges', df['TotalCharges'].min(), df['TotalCharges'].max())
+ 
+  
