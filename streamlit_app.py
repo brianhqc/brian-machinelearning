@@ -16,3 +16,6 @@ X
 st.write('**y**')
 y = df['Churn']
 y
+
+with st.expander('Data Visualization'):
+  st.scatter_chart(data=df, x= 'MonthlyCharges', y = 'tenure', color= 'Churn')
