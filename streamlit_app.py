@@ -8,3 +8,11 @@ with st.expander('Data'):
   st.write('**Raw Data**')
   df = pd.read_csv('https://raw.githubusercontent.com/brianhqc/brian-machinelearning/refs/heads/master/Telco-Customer-Churn.csv')
   df
+
+st.write('**X**')
+X = df.drop('Churn', axis = 1)
+X
+
+st.write('**y**')
+y = df.churn
+y
