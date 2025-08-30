@@ -1,5 +1,8 @@
 import streamlit as st
 import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
 st.title('The Machine Learning App')
 
 st.info('This Model Predicts Churn of Telcom Users')
@@ -18,4 +21,6 @@ y = df['Churn']
 y
 
 with st.expander('Data Visualization'):
-  st.scatter_chart(data=df, x= 'TotalCharges', y = 'tenure', color= 'Churn')
+  fig, ax= plt.subplots()
+  ax = sns.kdeplot(data=df, x='MonthlyCharges', hue='Churn', color='Red', shade=True, palette = {'No':'red','Yes':'green'}, common_norm=False)
+  st.pyplot(fig)
