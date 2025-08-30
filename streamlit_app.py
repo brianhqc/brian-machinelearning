@@ -14,5 +14,5 @@ X = df.drop('Churn', axis = 1)
 X
 
 st.write('**y**')
-y = df.churn
+y = df['Churn']
 y
