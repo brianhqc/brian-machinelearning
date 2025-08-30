@@ -26,5 +26,5 @@ with st.expander('Data Visualization'):
   st.pyplot(fig)
 
 # Data Preparateions
-with st.sidebar():
+with st.sidebar:
   st.header('Input Features')
