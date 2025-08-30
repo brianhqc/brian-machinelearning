@@ -12,15 +12,16 @@ with st.expander('Data'):
   df = pd.read_csv('https://raw.githubusercontent.com/brianhqc/brian-machinelearning/refs/heads/master/Telco-Customer-Churn.csv')
   df
 
-st.write('**X**')
-X = df.drop('Churn', axis = 1)
-X
+  st.write('**X**')
+  X = df.drop('Churn', axis = 1)
+  X
 
-st.write('**y**')
-y = df['Churn']
-y
+  st.write('**y**')
+  y = df['Churn']
+  y
 
 with st.expander('Data Visualization'):
   fig, ax= plt.subplots()
   ax = sns.kdeplot(data=df, x='MonthlyCharges', hue='Churn', color='Red', shade=True, palette = {'No':'red','Yes':'green'}, common_norm=False)
   st.pyplot(fig)
+
