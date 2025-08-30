@@ -27,6 +27,10 @@ with st.expander('Data Visualization'):
 
 # Data Preparateions
 df['TotalCharges']= pd.to_numeric(df["TotalCharges"], errors="coerce")
+df.drop(df[df['tenure']==0].index,inplace=True)
+
+df["SeniorCitizen"]= df["SeniorCitizen"].map({0: "No", 1: "Yes"})
+
 with st.sidebar:
   st.header('Input Features')
   gender = st.selectbox('gender', df['gender'].unique())
