@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
+st.title('The Machine Learning App')
 
-st.title('The Telcom Churn Prediction App')
+st.info('The Telcom Churn Prediction Model')
 
 with st.expander('Data'):
   st.write('**Raw Data**')
