@@ -26,6 +26,7 @@ with st.expander('Data Visualization'):
   st.pyplot(fig)
 
 # Data Preparateions
+df['TotalCharges']= pd.to_numeric(df["TotalCharges"], errors="coerce")
 with st.sidebar:
   st.header('Input Features')
   gender = st.selectbox('gender', df['gender'].unique())
