@@ -25,3 +25,6 @@ with st.expander('Data Visualization'):
   ax = sns.kdeplot(data=df, x='MonthlyCharges', hue='Churn', color='Red', shade=True, palette = {'No':'red','Yes':'green'}, common_norm=False)
   st.pyplot(fig)
 
+# Data Preparateions
+with st.sidebar():
+  st.header('Input Features')
